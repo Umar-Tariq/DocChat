@@ -1,0 +1,18 @@
+DocChat Sample Document
+
+DocChat is an AI-powered document Q&A application. Users upload PDF or TXT files,
+and the system extracts text, splits it into overlapping chunks, and generates
+embeddings for each chunk using OpenAI.
+
+When a user asks a question, DocChat embeds the question, retrieves the most
+relevant chunks using cosine similarity, and sends those chunks as context to
+an LLM. The model is instructed to answer only from the provided context.
+
+If the answer is not found in the document, the assistant responds with:
+"I don't know based on this document."
+
+Key features include JWT authentication, per-user data isolation, document
+dashboard, chat history persistence, and citations showing chunk index and
+page number for every answer.
+
+This sample file is provided for testing uploads without needing an external PDF.
